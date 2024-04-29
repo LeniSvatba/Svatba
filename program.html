@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Program svatby</title>
   <style>
-    body {
+      body {
       background-image: url('template5.jpg'); /* Cesta k vaší fotografii */
       background-size: cover; /* Zajistí, že fotografie bude pokrývat celé pozadí */
+      background-position: center center; /* Centruje obrázek */
+      background-repeat: no-repeat; /* Obrázek se nebude opakovat */
       color: black; /* Černý text pro kontrast */
       font-family: Arial, sans-serif; /* Nastavení fontu */
       text-align: center; /* Zarovnání textu na střed */
+      margin: 0; /* Odebrání výchozích okrajů */
+      padding-top: 20px; /* Vzdálenost obsahu od horní části */
     }
     .back-link {
       text-align: left; /* Zarovnání textu nalevo */
@@ -19,6 +23,16 @@
     .back-link a {
       color: black; /* Černá barva odkazu */
       text-decoration: none; /* Žádné podtržení odkazu */
+    }
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll; /* Přizpůsobení pozadí pro lepší výkon na mobilních zařízeních */
+        background-size: 100% auto; /* Změní velikost pozadí, aby vyplnilo šířku a zachovalo proporce */
+      }
+      .back-link {
+        margin: 10px; /* Menší odsazení pro úsporu místa */
+      }
     }
   </style>
 </head>
