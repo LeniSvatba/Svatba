@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Svatba</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Připojí váš CSS soubor -->
+  <style>
+    /* Styl pro odpočet */
+    #countdown {
+      position: fixed; /* Pevná pozice */
+      bottom: 20px; /* Umístění dole na stránce */
+      left: 50%; /* Zarovnání na střed */
+      transform: translateX(-50%); /* Zarovnání na střed */
+      background-color: black; /* Černý pozadí */
+      color: white; /* Bílý text */
+      padding: 10px; /* Odsazení okraje */
+      border-radius: 5px; /* Zaoblené rohy */
+    }
+    .heading {
+      text-align: left; /* Zarovnání textu nalevo */
+      margin: auto; /* Zarovnání vodorovně na střed */
+      max-width: 50%; /* Maximální šířka nadpisu */
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading"><a href=file:///C:/Users/KY221YU/OneDrive%20-%20EY/Documents/Personal/Svatba/program.html>Program</a></h1>
+  <h1>Svatba na Běleckém mlýně</h1>
+  <p>Datum: 21. září 2024</p>
+  <p>Čas: 13:00</p>
+  <p>Místo: <a href="https://www.google.com/maps?ll=49.529277,16.988467&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=6893680676056947664" target="_blank">Bělecký mlýn</a></p>
+  <!-- Odpočet do svatby -->
+  <div id="countdown"></div>
+
+  <!-- Skript pro generování QR kódu -->
+  <script src="qrcode.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    // Funkce pro výpočet odpočtu
+    function updateCountdown() {
+      // Aktuální datum a čas
+      var now = new Date();
+      // Datum a čas svatby
+      var weddingDate = new Date("2024-09-21T13:00:00");
+      // Rozdíl mezi aktuálním časem a časem svatby v milisekundách
+      var timeDiff = weddingDate - now;
+      // Přepočet na dny, hodiny, minuty a sekundy
+      var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      
+      // Zobrazí odpočet na stránce
+      document.getElementById("countdown").innerHTML = "Do svatby zbývá " + days + " dnů, " + hours + " hodin, " + minutes + " minut a " + seconds + " sekund.";
+    }
+
+    // Spustíme funkci pro aktualizaci odpočtu každou sekundu
+    setInterval(updateCountdown, 1000);
+
+    // Zavoláme funkci pro výpočet odpočtu, aby se odpočet zobrazil okamžitě
+    updateCountdown();
+  </script>
+</body>
+</html>
