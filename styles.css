@@ -1,12 +1,12 @@
 body {
   background-image: url('template5.jpg'); /* make sure the path is correct */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat; /* Prevents the background from repeating */
   background-attachment: fixed; /* Keeps the background fixed during scroll */
   color: black;
   margin: 0;
-  padding-top: 20px; /* or adjust as needed for spacing at the top */
+  padding: 0;
   text-align: center;
   min-height: 100vh; /* Ensures the body is at least the height of the viewport */
 }
