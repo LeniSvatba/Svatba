@@ -6,33 +6,35 @@
   <title>Program svatby</title>
   <style>
      body {
-      background-image: url('template5.jpg'); /* Cesta k vaší fotografii */
-      background-size: cover; /* Zajistí, že fotografie bude pokrývat celé pozadí */
-      background-position: center center; /* Centruje obrázek */
-      background-repeat: no-repeat; /* Obrázek se nebude opakovat */
-      color: black; /* Černý text pro kontrast */
-      font-family: Arial, sans-serif; /* Nastavení fontu */
-      text-align: center; /* Zarovnání textu na střed */
-      margin: 0; /* Odebrání výchozích okrajů */
-      padding-top: 20px; /* Vzdálenost obsahu od horní části */
+    text-align: center;
+    background-image: url('template5.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding-top: 0; /* Remove padding if you want the content to start at the very top */
+    min-height: 100vh;
+  }
+  .heading {
+    text-align: left;
+    display: block; /* Ensures that the links are stacked vertically */
+    position: absolute;
+    left: 250px; /* Adjusted for desktop */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  /* Responsive styles for screens less than or equal to 600px wide */
+  @media (max-width: 600px) {
+  .heading {
+      text-align: left;
+      font-size: 14px; /* Smaller font size for mobile */
+      left: 10px; /* Adjust position for smaller screens */
     }
-    .back-link {
-      text-align: left; /* Zarovnání textu nalevo */
-      margin: 20px; /* Odsazení od horního a levého okraje */
-    }
-    .back-link a {
-      color: black; /* Černá barva odkazu */
-      text-decoration: none; /* Žádné podtržení odkazu */
-    }
-    /* Media query for mobile devices */
-    @media (max-width: 768px) {
-      body {
-        background-attachment: scroll; /* Přizpůsobení pozadí pro lepší výkon na mobilních zařízeních */
-        background-size: 100% auto; /* Změní velikost pozadí, aby vyplnilo šířku a zachovalo proporce */
-      }
-      .back-link {
-        margin: 10px; /* Menší odsazení pro úsporu místa */
-      }
     }
   </style>
 </head>
