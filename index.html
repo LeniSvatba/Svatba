@@ -7,20 +7,15 @@
   <link rel="stylesheet" href="styles.css"> <!-- Připojí váš CSS soubor -->
   <style>
   body {
-    text-align: center; /* Centers text horizontally */
-    display: flex; /* Uses flexbox to layout children */
-    flex-direction: column; /* Stacks children vertically */
-    align-items: center; /* Centers children horizontally */
-    justify-content: flex-start; /* Aligns children to the start of the flex container */
-    background-image: url('template5.jpg'); /* Adjust the path if necessary */
+    text-align: center;
+    background-image: url('template5.jpg');
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    background-attachment: fixed; /* Keeps the background fixed during scroll */
-    color: black;
-    margin: 0; /* Removes default margin */
-    padding-top: 20px; /* Adds space at the top of the page */
-    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding-top: 0; /* Remove padding if you want the content to start at the very top */
+    min-height: 100vh;
   }
   .heading {
     text-align: left;
@@ -54,8 +49,10 @@
     }
     .content {
       max-width: 800px;
-      margin: auto;
-      padding-left: 20px; /* Adjust as needed */
+      margin-top: 20px; /* Adjust this value as needed to position content at the top */
+      text-align: center; /* Centers text within the content area */
+      width: 100%; /* Ensures the content takes the full width */
+      /* Remove any padding here if you want the content to start at the very top */
     }
     .lenka-dominik {
       font-size: 1.5em; /* Větší písmo pro jména */
