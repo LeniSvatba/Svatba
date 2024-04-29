@@ -17,16 +17,25 @@
       padding: 10px; /* Odsazení okraje */
       border-radius: 5px; /* Zaoblené rohy */
     }
+    body {
+      text-align: center; /* Zarovnání textu na střed */
+    }
     .heading {
       text-align: left; /* Zarovnání textu nalevo */
-      margin: auto; /* Zarovnání vodorovně na střed */
-      max-width: 50%; /* Maximální šířka nadpisu */
+      position: absolute; /* Absolutní pozice */
+      top: 50%; /* Zarovnání ve středu vertikálně */
+      transform: translateY(-50%); /* Přesun o -50% jeho výšky */
+      left: 20px; /* Odsazení z leva */
+    }
+    h1, p {
+      margin: 20px 0; /* Odsazení okolo */
     }
   </style>
 </head>
 <body>
   <h1 class="heading"><a href="program.html">Program</a></h1>
   <h1>Svatba na Běleckém mlýně</h1>
+  <h2>Lenka & Dominik</h2>
   <p>Datum: 21. září 2024</p>
   <p>Čas: 13:00</p>
   <p>Místo: <a href="https://www.google.com/maps?ll=49.529277,16.988467&z=13&t=m&hl=en-US&gl=US&mapclient=embed&cid=6893680676056947664" target="_blank">Bělecký mlýn</a></p>
