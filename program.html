@@ -20,7 +20,24 @@ h2 {
 p {
   color: #666;
 }
-
+ .back-link {
+      text-align: left; /* Zarovnání textu nalevo */
+      margin: 20px; /* Odsazení od horního a levého okraje */
+    }
+    .back-link a {
+      color: black; /* Černá barva odkazu */
+      text-decoration: none; /* Žádné podtržení odkazu */
+    }
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll; /* Přizpůsobení pozadí pro lepší výkon na mobilních zařízeních */
+        background-size: 100% auto; /* Změní velikost pozadí, aby vyplnilo šířku a zachovalo proporce */
+      }
+      .back-link {
+        margin: 10px; /* Menší odsazení pro úsporu místa */
+      }
+    }
      body {
     text-align: center;
     background-image: url('template5.jpg');
