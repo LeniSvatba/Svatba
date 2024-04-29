@@ -14,13 +14,23 @@
       height: 100vh; /* Výška celé obrazovky */
       margin: 0; /* Odstranění okrajů */
     }
+    /* Basic styles */
     .heading {
-      text-align: left; /* Zarovnání textu nalevo */
-      margin: 0;
-      position: absolute; /* Absolutní pozice */
-      top: 50%; /* Zarovnání ve středu vertikálně */
-      transform: translateY(-50%); /* Přesun o -50% jeho výšky */
-      left: 250px; /* Odsazení z leva */
+      position: absolute;
+      left: 40px; /* Adjusted for desktop */
+      top: 50%;
+      transform: translateY(-50%);
+      color: #333;
+      font-size: 24px;
+      text-decoration: none;
+  }
+
+  /* Responsive styles for screens less than or equal to 600px wide */
+  @media (max-width: 600px) {
+  .heading {
+      font-size: 18px; /* Smaller font size for mobile */
+      left: 10px; /* Adjust position for smaller screens */
+    }
     }
     #countdown {
       position: fixed; /* Pevná pozice */
@@ -44,9 +54,11 @@
   </style>
 </head>
 <body>
-  <div class="heading"><a href="program.html">Program</a></div>
-  <div class="heading" style="top: calc(50% + 30px);"><a href="oznameni.html">Oznámení</a></div>
-  <div class="heading" style="top: calc(50% + 60px);"><a href="jidlo.html">Svatební menu</a></div>
+ <div class="heading">
+  <a href="program.html">Program</a>
+  <a href="oznameni.html" style="margin-top: 20px; display: block;">Oznámení</a>
+  <a href="jidlo.html" style="margin-top: 40px; display: block;">Svatební menu</a>
+ </div>
   <div class="content">
     <h1>Svatba na Běleckém mlýně</h1>
     <div class="lenka-dominik">Lenka & Dominik</div>
