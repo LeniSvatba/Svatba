@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="styles.css"> <!-- Připojí váš CSS soubor -->
   <style>
   body {
-    text-align: center; /* Centers text */
+    text-align: center; /* Centers text horizontally */
     display: flex; /* Uses flexbox to layout children */
     flex-direction: column; /* Stacks children vertically */
     align-items: center; /* Centers children horizontally */
+    justify-content: flex-start; /* Aligns children to the start of the flex container */
+    background-image: url('template5.jpg'); /* Adjust the path if necessary */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+    color: black;
     margin: 0; /* Removes default margin */
     padding-top: 20px; /* Adds space at the top of the page */
+    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
   }
   .heading {
     text-align: left;
