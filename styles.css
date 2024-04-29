@@ -1,12 +1,15 @@
 body {
- background-image: url('template5.jpg'); /* Cesta k vaší fotografii */
-  background-size: cover; /* Zajistí, že fotografie bude pokrývat celé pozadí */
-  background-position: center; /* Nastaví pozici fotografie do středu */
-  color: black; /* Bílá barva textu pro kontrast */
- text-align: center;
-
+  background-image: url('template5.jpg'); /* make sure the path is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  background-attachment: fixed; /* Keeps the background fixed during scroll */
+  color: black;
+  margin: 0;
+  padding-top: 20px; /* or adjust as needed for spacing at the top */
+  text-align: center;
+  min-height: 100vh; /* Ensures the body is at least the height of the viewport */
 }
-
 h1 {
   color: #333;
   text-align: left;
