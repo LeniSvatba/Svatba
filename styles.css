@@ -2,6 +2,9 @@
 h1 {
   color: #333;
   text-align: center;
+  margin-top: 0; /* Reduces space above the h1 */
+  padding-top: 10px; /* Adds a little space above the h1 text if needed */
+  font-size: 2em; /* Adjust the font size as needed */
 }
 h2 {
   color: #333;
